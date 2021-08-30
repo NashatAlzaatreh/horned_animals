@@ -11,3 +11,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+#mainDiv {
+  margin: 0px;
+  
+  
+}
+
+#honorDiv {
+  
+  float: left;
+  margin: 7.5px;
+  
+}
+
+.card {
+  height:450px;
+}
+ 
+#honorDiv img {
+  height: 200px;
+}
+
+
+#h3Footer {
+  clear: both;
+}
+
