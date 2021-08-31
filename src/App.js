@@ -27,14 +27,7 @@ class App extends React.Component {
     });
   };
 
-  // function filterBeastByName(name) {
-
-  //   const filteredBeast = dataJason.filter(beast => {
-  //     return (beast.title === name);
-  //   });
-
-  //   return filteredBeast;
-  // }
+  
 
   render() {
     return (
