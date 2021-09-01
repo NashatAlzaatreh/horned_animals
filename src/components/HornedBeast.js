@@ -14,9 +14,10 @@ class HornedBeast extends React.Component {
     this.setState({
       votes: this.state.votes + 1,
     });
+    this.props.handleShow(this.props.data);
   };
 
-  handleShowFun = () => this.props.handleShow(this.props.data);
+  // handleShowFun = () => this.props.handleShow(this.props.data);
 
   render() {
     return (
@@ -25,7 +26,7 @@ class HornedBeast extends React.Component {
           <Card.Img
             variant="top"
             src={this.props.imageUrl}
-            onClick={this.handleShowFun}
+            onClick={this.votingCounter}
           />
           <Card.Body>
             <Card.Title>{this.props.title}</Card.Title>

@@ -1,5 +1,6 @@
 import React from "react";
 import HornedBeast from "./HornedBeast";
+// import Forme from "./Form";
 
 class Main extends React.Component {
   // constructor(props) {
@@ -7,9 +8,16 @@ class Main extends React.Component {
   //     this.state = { data }
   // }
 
+  // updateHornedBeast = (newHornedBeast) => {
+  //   this.setState({
+  //     dataJason: newHornedBeast,
+  //   });
+  // };
+
   render() {
     return (
       <div id="mainDiv">
+        {/* <Forme updateHornedBeast={this.updateHornedBeast} /> */}
         {this.props.dataJason.map((items) => {
           return (
             <HornedBeast
@@ -22,18 +30,6 @@ class Main extends React.Component {
             />
           );
         })}
-
-        {/* {
-                    this.props.dataJason.map(details => {
-                        return (
-                            < SelectedBeast
-                                title={details.title}
-                                description={details.description}
-                                alt={details.title}
-                                imageUrl={details.image_url} />
-                        )
-                    })
-                } */}
       </div>
     );
   }
