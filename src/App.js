@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import dataJason from "./assets/data.json";
 import SelectedBeast from "./components/SelectedBeast ";
+import Forme from "./components/Form";
 
 class App extends React.Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class App extends React.Component {
       data: dataJason,
       show: false,
       selectedData: {},
+      selectedHorne: [],
     };
   }
 
@@ -27,12 +29,34 @@ class App extends React.Component {
     });
   };
 
-  
+  // selectedHorne = dataJason.filter((value) => {
+  //   return value.horns === chosenHorn;
+  // });
+
+  // updateHornedBeast = (newHornedBeast) => {
+  //   this.setState({
+  //     dataJason: newHornedBeast,
+  //   });
+  // };
+
+  filterHorn = (event) => {
+    let numHorns = parseInt(event.target.value);
+    console.log(numHorns);
+
+    let selectedHorne = dataJason.filter((value) => {
+      return value.horns === numHorns;
+    });
+    // console.log(selectedHorne);
+    this.setState({
+      data: selectedHorne,
+    });
+  };
 
   render() {
     return (
       <div>
         <Header />
+        <Forme filterHorn={this.filterHorn} />
         <Main dataJason={this.state.data} handleShow={this.handleShow} />
         <SelectedBeast
           show={this.state.show}
